@@ -9,6 +9,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- custom css link -->
     <link rel="stylesheet" href="styles/style.css">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="font-poppins">
     <!-- header section start here -->
@@ -22,21 +24,84 @@
         <!-- home section start -->
         <section class="home flex flex-row justify-center min-h-screen text-center">
            <div class="flex flex-col items-center justify-center">
-            <h1 class="text-8xl font-anton font-normal leading-[126px] text-white">ALPHABET CLASH</h1>
-            <p class="text-white text-lg">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <h1 class="text-[87px] font-anton font-normal leading-[116px] text-white">ALPHABET CLASH</h1>
+            <p class="text-white text-[16px] font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
             <button class="btn btn-praimary mt-4">Play Now</button>
            </div>
         </section>
         <!-- home section end -->
         <!-- play ground section start -->
-        <section class="play-ground">
+        <section class="play-ground hidden">
+            <div class="flex flex-col justify-center items-center gap-4 pt-6">
+                <!-- screen -->
+                <div class="artboard border-[12px] rounded-lg border-[#010313CC] bg-[#FFFFFFB3] artboard-horizontal phone-6"><div class="flex justify-center">
+                    <p class="bg-[#2f2941] py-1 px-6 rounded-b-xl text-white">
+                        Don't watch keyboard  while playing...
+                    </p></div>
+                    <div class="flex justify-center items-center h-full"><p class="text-9xl font-bold text-black ">Y</p></div>
+                </div>
+                <!-- ---------------- -->
+                <!-- keyboard start -->
+                <div class="keyboard-container">
+                    <div class="flex justify-center font-anton font-bold gap-1 text-[20px] my-1 w-full">
+                        <kbd class="kbd">q</kbd>
+                        <kbd class="kbd">w</kbd>
+                        <kbd class="kbd">e</kbd>
+                        <kbd class="kbd">r</kbd>
+                        <kbd class="kbd">t</kbd>
+                        <kbd class="kbd">y</kbd>
+                        <kbd class="kbd">u</kbd>
+                        <kbd class="kbd">i</kbd>
+                        <kbd class="kbd">o</kbd>
+                        <kbd class="kbd">p</kbd>
+                      </div> 
+                      <div class="flex justify-center font-anton font-bold gap-1 text-[20px] my-1 w-full">
+                        <kbd class="kbd">a</kbd>
+                        <kbd class="kbd">s</kbd>
+                        <kbd class="kbd">d</kbd>
+                        <kbd class="kbd">f</kbd>
+                        <kbd class="kbd">g</kbd>
+                        <kbd class="kbd">h</kbd>
+                        <kbd class="kbd">j</kbd>
+                        <kbd class="kbd">k</kbd>
+                        <kbd class="kbd">l</kbd>
+                      </div> 
+                      <div class="flex justify-center font-anton font-bold gap-1 text-[20px] my-1 w-full">
+                        <kbd class="kbd">z</kbd>
+                        <kbd class="kbd">x</kbd>
+                        <kbd class="kbd">c</kbd>
+                        <kbd class="kbd">v</kbd>
+                        <kbd class="kbd">b</kbd>
+                        <kbd class="kbd">n</kbd>
+                        <kbd class="kbd">m</kbd>
+                        <kbd class="kbd">/</kbd>
+                      </div>
+                </div>
+                <!-- keyboard end -->
+                <!-- life score -->
+                <div class="flex justify-between w-3/5">
+                    <button class="btn bg-purple-900 px-6 rounded-full h-2 text-white border-none">Life
+                        <i class="fa-solid fa-heart-circle-xmark"></i>1
+                        
+                      </button>
+                      <!-- ------------ -->
+                      <button class="btn border-none px-6 h-2 rounded-full bg-violet-700 text-white">
+                        Score<i class="fa-solid border-1 bg-white  text-black pt-1 rounded-full h-5 text-center items-center w-5 fa-dollar-sign"></i>1
+                      </button>
+                </div>
+            </div>
         </section>
         <!-- play ground section end -->
         <!-- score section start -->
-        <section class="score">
-
+        <section class="score flex justify-center items-center min-h-screen hidden">
+            <div class="text-center bg-[#FFFFFF33] p-7 rounded-xl space-y-3">
+                <h1 class="text-white text-5xl"><span class="font-extrabold text-5xl text-white">Score :</span> 14</h1>
+                <button class="btn bn-praimary font-bold">Play Agin</button>
+                <p class="text-white font-lg">Practice will make you Pro</p>
+            </div>
         </section>
     </main>
     <!-- main section end here -->
+    <script src="js/index.js"></script>
 </body>
 </html>
