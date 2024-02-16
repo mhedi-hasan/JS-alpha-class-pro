@@ -25,8 +25,8 @@
         <section id="home-screen" class="flex flex-row justify-center min-h-screen text-center">
            <div class="flex flex-col items-center justify-center">
             <h1 class="text-[87px] font-anton font-normal leading-[116px] text-white">ALPHABET CLASH</h1>
-            <p class="text-white text-[16px] font-medium">Unleash Your Keyboard Kung Fu : Press "Enter" to Play</p>
-            <button onclick="play()" class="btn btn-praimary mt-4">Play Now</button>
+            <p class="text-white text-lg font-medium">Unleash Your Keyboard Kung Fu : Press "Enter" to Play</p>
+            <button onclick="play()" class="btn text-lg btn-praimary mt-4">Play Now</button>
            </div>
         </section>
         <!-- home section end -->
@@ -38,7 +38,7 @@
                     <p class="bg-[#2f2941] py-1 px-6 rounded-b-xl text-white">
                         Don't watch keyboard  while playing...
                     </p></div>
-                    <div class="flex justify-center items-center h-full">
+                    <div id="current-alphabets" class="flex text-5xl text-black  justify-center items-center h-full">
                         <p id="current-alphabet" class="text-9xl font-bold text-black uppercase ">Y</p></div>
                 </div>
                 <!-- ---------------- -->
@@ -94,11 +94,12 @@
         </section>
         <!-- play ground section end -->
         <!-- score section start -->
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <section id="final-score" class="flex justify-center items-center min-h-screen hidden">
             <div class="text-center bg-[#FFFFFF33] p-7 rounded-xl space-y-3">
-                <h1 class="text-white text-5xl"><span class="font-extrabold text-5xl text-white">Score :</span> 14</h1>
-                <button class="btn bn-praimary font-bold">Play Agin</button>
-                <p class="text-white font-lg">Practice will make you Pro</p>
+                <h1 class="text-3xl text-emerald-300 font-extrabold">Game Over </h1>
+                <h1 class="text-white pb-8 text-5xl"><span class="font-extrabold text-5xl text-white">Score :</span> <span id="last-score">14</span></h1>
+                <button onclick="play()" class="btn text-lg bn-praimary font-bold">Play Agin</button>
+                <p class="text-white text-lg font-lg">Practice will make you Pro</p>
             </div>
         </section>
     </main>

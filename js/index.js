@@ -10,7 +10,7 @@
 
 function handleKeyboardButtonPress(event) {
   const playerPressed = event.key;
-  //   console.log("PlayerPressed:", playerPressed);
+    console.log("PlayerPressed:", playerPressed);
 
   // get the expectation to press
   const currentAlphabetElement = document.getElementById("current-alphabet");
@@ -27,7 +27,7 @@ function handleKeyboardButtonPress(event) {
     const currentScoreElement = document.getElementById("current-score");
     const currentScoreText = currentScoreElement.innerText;
     const currentScores = parseInt(currentScoreText);
-    console.log(currentScores);
+    // console.log(currentScores);
     // 2: increase the score by 1
     const newScore = currentScores + 1;
     // 3: show the Update score
@@ -45,6 +45,11 @@ function handleKeyboardButtonPress(event) {
     const newLife = currentLife - 1;
     //-->3: display the update life count
     currentLifeElement.innerText = newLife;
+
+    if(newLife===0){
+      // document.getElementById('current-alphabets').innerText='Game Over';
+      gameOver();
+    }
   }
 }
 document.addEventListener("keyup", handleKeyboardButtonPress);
@@ -62,7 +67,32 @@ function continueGame() {
 }
 
 function play() {
+  //hide all section show only play ground section
   hideElementId("home-screen");
+  hideElementId('final-score');
   showElementId("play-ground");
+
+  // reset score and life value
+  setTextElementValueById('current-life',5)
+  setTextElementValueById('current-score',0)
+
   continueGame();
 }
+function gameOver(){
+  hideElementId('play-ground');
+  showElementId("final-score");
+
+  // update final score
+  const lastScore=getTextElementValueById('current-score');
+  console.log(lastScore);
+  setTextElementValueById('last-score',lastScore);
+
+  //
+  const currentAlphabets=getElementTextById('current-alphabet');
+  // console.log(currentAlphabets);
+  removeBackgroundColorById(currentAlphabets);
+}
+// function tryAgin(){
+//   hideElementId('final-score');
+//   showElementId("play-ground");
+// }
